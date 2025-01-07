@@ -1,0 +1,10 @@
+services:
+  msal_app:
+    image: msgraph_auth
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CLIENT_ID=${CLIENT_ID}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - TENANT_ID=${TENANT_ID}
